@@ -88,14 +88,17 @@ const gameInputs = gameGenre.querySelectorAll(`.game__input`);
 const gameChecks = gameGenre.querySelectorAll(`.game__check`);
 
 const validateChecked = () => {
-  // let disabled = true;
+  let disabled = true;
   for (let input of gameInputs) {
     if (input.checked) {
-      gameSubmit.removeAttribute(`disabled`);
+      disabled = false;
       break;
-    } else {
-      gameSubmit.setAttribute(`disabled`, true);
     }
+  }
+  if (disabled) {
+    gameSubmit.setAttribute(`disabled`, true);
+  } else {
+    gameSubmit.removeAttribute(`disabled`);
   }
 };
 
