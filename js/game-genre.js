@@ -87,9 +87,8 @@ gameSubmit.setAttribute(`disabled`, `true`);
 const gameInputs = gameGenre.querySelectorAll(`.game__input`);
 const gameChecks = gameGenre.querySelectorAll(`.game__check`);
 
-const validateChecked = (e) => {
-  let inp = document.querySelector(`#${e.target.attributes.for[`value`]}`);
-
+const validateChecked = () => {
+  // let disabled = true;
   for (let input of gameInputs) {
     if (input.checked) {
       gameSubmit.removeAttribute(`disabled`);
@@ -100,9 +99,12 @@ const validateChecked = (e) => {
   }
 };
 
-[...gameChecks].forEach((gameCheck) => {
-  gameCheck.addEventListener(`click`, validateChecked);
-});
+const triggerInput = (e) => {
+  const inp = document.querySelector(`#${e.target.attributes.for[`value`]}`);
+  inp.addEventListener(`change`, validateChecked);
+};
+
+[...gameChecks].forEach((gameCheck) => gameCheck.addEventListener(`click`, triggerInput));
 
 gameSubmit.addEventListener(`click`, function () {
   changeScreen(gameArtist);
