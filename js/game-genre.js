@@ -82,11 +82,30 @@ const gameGenreTemplate = `<section class="game game--genre">
   </section>`;
 
 const gameGenre = getElementFromTemplate(gameGenreTemplate);
-
 const gameSubmit = gameGenre.querySelector(`.game__submit`);
+gameSubmit.setAttribute(`disabled`, `true`);
+const gameInputs = gameGenre.querySelectorAll(`.game__input`);
+const gameChecks = gameGenre.querySelectorAll(`.game__check`);
+
+const validateChecked = (e) => {
+  let inp = document.querySelector(`#${e.target.attributes.for[`value`]}`);
+
+  for (let input of gameInputs) {
+    if (input.checked) {
+      gameSubmit.removeAttribute(`disabled`);
+      break;
+    } else {
+      gameSubmit.setAttribute(`disabled`, true);
+    }
+  }
+};
+
+[...gameChecks].forEach((gameCheck) => {
+  gameCheck.addEventListener(`click`, validateChecked);
+});
 
 gameSubmit.addEventListener(`click`, function () {
   changeScreen(gameArtist);
-})
+});
 
 export default gameGenre;
