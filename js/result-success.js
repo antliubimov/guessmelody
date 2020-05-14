@@ -1,6 +1,7 @@
 // result-success.js
 
 import getElementFromTemplate from "./getElementFromTemplate";
+import replayGame from "./replayGame";
 
 // <!-- Результат игры: выигрыш -->
 const resultSuccessTemplate = `<section class="result">
@@ -12,5 +13,7 @@ const resultSuccessTemplate = `<section class="result">
   </section>`;
 
 const resultSuccess = getElementFromTemplate(resultSuccessTemplate);
+
+replayGame(resultSuccess, `.result__replay`);
 
 export default resultSuccess;

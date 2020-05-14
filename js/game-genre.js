@@ -3,6 +3,7 @@
 import getElementFromTemplate from "./getElementFromTemplate";
 import changeScreen from "./changeScreen";
 import gameArtist from "./game-artist";
+import replayGame from "./replayGame";
 
 // <!-- Игра на выбор жанра -->
 const gameGenreTemplate = `<section class="game game--genre">
@@ -112,5 +113,7 @@ const triggerInput = (e) => {
 gameSubmit.addEventListener(`click`, function () {
   changeScreen(gameArtist);
 });
+
+replayGame(gameGenre, `.game__back`);
 
 export default gameGenre;

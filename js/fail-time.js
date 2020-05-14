@@ -1,6 +1,7 @@
 // fail-time.js
 
 import getElementFromTemplate from "./getElementFromTemplate";
+import replayGame from "./replayGame";
 
 // <!-- Результат игры: проигрыш, время вышло -->
 const failTimeTemplate = `<section class="result">
@@ -11,5 +12,6 @@ const failTimeTemplate = `<section class="result">
   </section>`;
 
 const failTime = getElementFromTemplate(failTimeTemplate);
+replayGame(failTime, `.result__replay`);
 
 export default failTime;

@@ -1,6 +1,9 @@
 // fail-tries.js
 
 import getElementFromTemplate from "./getElementFromTemplate";
+import backToWelcome from "./replayGame";
+import resultSuccess from "./result-success";
+import replayGame from "./replayGame";
 
 // <!-- Результат игры: проигрыш, закончились попытки -->
 const failTriesTemplate = `<section class="result">
@@ -11,5 +14,6 @@ const failTriesTemplate = `<section class="result">
   </section>`;
 
 const failTries = getElementFromTemplate(failTriesTemplate);
+replayGame(failTries,`.result__replay`);
 
 export default failTries;

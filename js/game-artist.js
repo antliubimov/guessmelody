@@ -1,6 +1,11 @@
 // game-artist.js
 
 import getElementFromTemplate from "./getElementFromTemplate";
+import changeScreen from "./changeScreen";
+import resultSuccess from "./result-success";
+import failTime from "./fail-time";
+import failTries from "./fail-tries";
+import replayGame from "./replayGame";
 
 // <!-- Игра на выбор исполнителя -->
 const gameArtistTemplate = `<section class="game game--artist">
@@ -63,5 +68,17 @@ const gameArtistTemplate = `<section class="game game--artist">
   </section>`;
 
 const gameArtist = getElementFromTemplate(gameArtistTemplate);
+const artists = gameArtist.querySelectorAll(`.artist`);
+
+[...artists].forEach((artist) => {
+  artist.addEventListener(`click`, function () {
+    const result = [resultSuccess, failTries, failTime];
+    let randomResult = Math.floor(Math.random() * 2 + 0.5);
+
+    changeScreen(result[randomResult]);
+  });
+});
+
+replayGame(gameArtist, `.game__back`);
 
 export default gameArtist;
