@@ -6,7 +6,7 @@ import getElementFromTemplate from "./getElementFromTemplate";
 const resultArtistTemplate = `<section class="result result--artist">
   <div class="result__logo"><img src="img/melody-logo.png" alt="Угадай мелодию" width="186" height="83"></div>
   <h2 class="result__title">Вы отгадали 4 мелодии</h2>
-<p class="result__text">Это лучше чем у 80% игроков</p>
+<p class="result__text">Это лучше чем у 80% игроков</p>
 <div class="result__answer">
   <div class="artist">
   <p class="artist__text">Самый<br>быстрый ответ</p>
