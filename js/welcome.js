@@ -1,8 +1,8 @@
 // welcome.js
 
-import getElementFromTemplate from "./getElementFromTemplate";
+import getElementFromTemplate from "./get-element-from-template";
 import gameGenre from "./game-genre";
-import changeScreen from "./changeScreen";
+import changeScreen from "./change-screen";
 
 // <!-- Приветствие -->
 const welcomeTemplate = `<section class="welcome">

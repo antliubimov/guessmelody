@@ -1,7 +1,7 @@
 // fail-tries.js
 
-import getElementFromTemplate from "./getElementFromTemplate";
-import replayGame from "./replayGame";
+import getElementFromTemplate from "./get-element-from-template";
+import replayGame from "./replay-game";
 
 // <!-- Результат игры: проигрыш, закончились попытки -->
 const failTriesTemplate = `<section class="result">

@@ -1,6 +1,6 @@
 // main.js
 
-import changeScreen from "./changeScreen";
+import changeScreen from "./change-screen";
 import welcome from "./welcome";
 
 changeScreen(welcome);

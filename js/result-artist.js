@@ -1,6 +1,6 @@
 // result-artist.js
 
-import getElementFromTemplate from "./getElementFromTemplate";
+import getElementFromTemplate from "./get-element-from-template";
 
 // <!-- Результат игры на выбор исполнителя -->
 const resultArtistTemplate = `<section class="result result--artist">

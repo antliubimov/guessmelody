@@ -1,9 +1,9 @@
 // game-genre.js
 
-import getElementFromTemplate from "./getElementFromTemplate";
-import changeScreen from "./changeScreen";
+import getElementFromTemplate from "./get-element-from-template";
+import changeScreen from "./change-screen";
 import gameArtist from "./game-artist";
-import replayGame from "./replayGame";
+import replayGame from "./replay-game";
 
 // <!-- Игра на выбор жанра -->
 const gameGenreTemplate = `<section class="game game--genre">

@@ -1,11 +1,11 @@
 // game-artist.js
 
-import getElementFromTemplate from "./getElementFromTemplate";
-import changeScreen from "./changeScreen";
+import getElementFromTemplate from "./get-element-from-template";
+import changeScreen from "./change-screen";
 import resultSuccess from "./result-success";
 import failTime from "./fail-time";
 import failTries from "./fail-tries";
-import replayGame from "./replayGame";
+import replayGame from "./replay-game";
 
 // <!-- Игра на выбор исполнителя -->
 const gameArtistTemplate = `<section class="game game--artist">

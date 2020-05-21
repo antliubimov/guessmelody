@@ -1,4 +1,4 @@
-// changeScreen.js
+// change-screen.js
 
 const main = document.querySelector(`.main`);
 

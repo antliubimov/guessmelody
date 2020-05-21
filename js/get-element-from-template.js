@@ -1,4 +1,4 @@
-// getElementFromTemplate.js
+// get-element-from-template.js
 
 const getElementFromTemplate = (template) => {
   const div = document.createElement(`div`);
