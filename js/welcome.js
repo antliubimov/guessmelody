@@ -1,8 +1,7 @@
 // welcome.js
 
-import getElementFromTemplate from "./get-element-from-template";
+import {getElementFromTemplate, changeScreen} from "./utils";
 import gameGenre from "./game-genre";
-import changeScreen from "./change-screen";
 
 // <!-- Приветствие -->
 const welcomeTemplate = `<section class="welcome">
@@ -17,12 +16,13 @@ const welcomeTemplate = `<section class="welcome">
 <p class="welcome__text">Удачи!</p>
 </section>`;
 
-const welcome = getElementFromTemplate(welcomeTemplate);
+export default () => {
+  const welcome = getElementFromTemplate(welcomeTemplate);
 
-const welcomeButton = welcome.querySelector(`.welcome__button`);
+  const welcomeButton = welcome.querySelector(`.welcome__button`);
 
-welcomeButton.addEventListener(`click`, function () {
-  changeScreen(gameGenre);
-});
-
-export default welcome;
+  welcomeButton.addEventListener(`click`, function () {
+    changeScreen(gameGenre());
+  });
+  return welcome;
+};

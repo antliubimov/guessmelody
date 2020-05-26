@@ -1,6 +1,6 @@
 // result-genre.js
 
-import getElementFromTemplate from "./get-element-from-template";
+import {getElementFromTemplate} from "./utils";
 
 // <!-- Результат игры на выбор жанра -->
 const resultGenreTemplate = `<section class="result result--genre">

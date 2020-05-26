@@ -1,7 +1,6 @@
 // fail-tries.js
 
-import getElementFromTemplate from "./get-element-from-template";
-import replayGame from "./replay-game";
+import {getElementFromTemplate, replayGame} from "./utils";
 
 // <!-- Результат игры: проигрыш, закончились попытки -->
 const failTriesTemplate = `<section class="result">
@@ -11,7 +10,9 @@ const failTriesTemplate = `<section class="result">
     <button class="result__replay" type="button">Попробовать ещё раз</button>
   </section>`;
 
-const failTries = getElementFromTemplate(failTriesTemplate);
-replayGame(failTries, `.result__replay`);
+export default () => {
+  const failTries = getElementFromTemplate(failTriesTemplate);
+  replayGame(failTries, `.result__replay`);
 
-export default failTries;
+  return failTries;
+};

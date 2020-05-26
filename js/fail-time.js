@@ -1,7 +1,6 @@
 // fail-time.js
 
-import getElementFromTemplate from "./get-element-from-template";
-import replayGame from "./replay-game";
+import {getElementFromTemplate, replayGame} from "./utils";
 
 // <!-- Результат игры: проигрыш, время вышло -->
 const failTimeTemplate = `<section class="result">
@@ -11,7 +10,9 @@ const failTimeTemplate = `<section class="result">
     <button class="result__replay" type="button">Попробовать ещё раз</button>
   </section>`;
 
-const failTime = getElementFromTemplate(failTimeTemplate);
-replayGame(failTime, `.result__replay`);
+export default () => {
+  const failTime = getElementFromTemplate(failTimeTemplate);
+  replayGame(failTime, `.result__replay`);
 
-export default failTime;
+  return failTime;
+};

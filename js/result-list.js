@@ -1,6 +1,6 @@
 // result-list.js
 
-import getElementFromTemplate from "./get-element-from-template";
+import {getElementFromTemplate} from "./utils";
 
 // <!-- Результат игры на выбор исполнителя. Список -->
 const resultListTemplate = `<section class="result result--list">

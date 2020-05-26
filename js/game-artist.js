@@ -1,46 +1,28 @@
-// game-artist.js
+// game-get-artist.js
+// <!-- Игра на выбор исполнителя -->
 
-import header from "./header";
-import getElementFromTemplate from "./get-element-from-template";
-import changeScreen from "./change-screen";
-import artistTemplate from "./artist";
-import {games} from "./data/data";
+import {getElementFromTemplate, changeScreen, replayGame} from "./utils";
+import gameArtistTemplate from "./get-game-artist";
+
 import resultSuccess from "./result-success";
 import failTime from "./fail-time";
 import failTries from "./fail-tries";
-import replayGame from "./replay-game";
 
-const artistsHTML = games[`game-artist`].answers.map((artist) => artistTemplate(artist)).join(``);
+export default () => {
+  const gameArtist = getElementFromTemplate(gameArtistTemplate);
 
-// <!-- Игра на выбор исполнителя -->
-const gameArtistTemplate = `<section class="game game--artist">
-    ${header.innerHTML}
-    <section class="game__screen">
-      <h2 class="game__title">${games[`game-artist`].description}</h2>
-      <div class="game__track">
-        <button class="track__button track__button--play" type="button"></button>
-        <audio></audio>
-      </div>
+  const artists = gameArtist.querySelectorAll(`.artist`);
 
-      <form class="game__artist">
-        ${artistsHTML}
-      </form>
-    </section>
-  </section>`;
+  [...artists].forEach((artist) => {
+    artist.addEventListener(`click`, function () {
+      const result = [resultSuccess, failTries, failTime];
+      let randomResult = Math.floor(Math.random() * 2 + 0.5);
 
-
-const gameArtist = getElementFromTemplate(gameArtistTemplate);
-const artists = gameArtist.querySelectorAll(`.artist`);
-
-[...artists].forEach((artist) => {
-  artist.addEventListener(`click`, function () {
-    const result = [resultSuccess, failTries, failTime];
-    let randomResult = Math.floor(Math.random() * 2 + 0.5);
-
-    changeScreen(result[randomResult]);
+      changeScreen(result[randomResult]());
+    });
   });
-});
 
-// replayGame(gameArtist, `.game__back`);
+  replayGame(gameArtist, `.game__back`);
 
-export default gameArtist;
+  return gameArtist;
+};

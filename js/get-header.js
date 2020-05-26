@@ -1,8 +1,6 @@
-// header.js
-import getElementFromTemplate from "./get-element-from-template";
-import {initialState} from "./data/data";
+// get-header.js
 
-const headerTemplate = (state) => `<header class="game__header">
+const getHeader = (state) => `<header class="game__header">
       <a class="game__back" href="#">
         <span class="visually-hidden">Сыграть ещё раз</span>
         <img class="game__logo" src="/img/melody-logo-ginger.png" alt="Угадай мелодию">
@@ -23,6 +21,4 @@ const headerTemplate = (state) => `<header class="game__header">
       </div>
     </header>`;
 
-const header = getElementFromTemplate(headerTemplate(initialState));
-
-export default header;
+export default getHeader;

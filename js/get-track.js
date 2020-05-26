@@ -1,6 +1,6 @@
-// track.js
+// get-track.js
 
-const trackTemplate = (answer) => `<div class="track">
+const getTrack = (answer) => `<div class="track">
           <button class="track__button track__button--play" type="button"></button>
           <div class="track__status">
             <audio></audio>
@@ -11,5 +11,5 @@ const trackTemplate = (answer) => `<div class="track">
           </div>
         </div>`;
 
-export default trackTemplate;
+export default getTrack;
 

@@ -1,7 +1,6 @@
 // result-success.js
 
-import getElementFromTemplate from "./get-element-from-template";
-import replayGame from "./replay-game";
+import {getElementFromTemplate, replayGame} from "./utils";
 
 // <!-- Результат игры: выигрыш -->
 const resultSuccessTemplate = `<section class="result">
@@ -12,8 +11,10 @@ const resultSuccessTemplate = `<section class="result">
     <button class="result__replay" type="button">Сыграть ещё раз</button>
   </section>`;
 
-const resultSuccess = getElementFromTemplate(resultSuccessTemplate);
+export default () => {
+  const resultSuccess = getElementFromTemplate(resultSuccessTemplate);
 
-replayGame(resultSuccess, `.result__replay`);
+  replayGame(resultSuccess, `.result__replay`);
 
-export default resultSuccess;
+  return resultSuccess;
+};
