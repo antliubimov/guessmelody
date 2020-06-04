@@ -8,13 +8,6 @@ const initialState = {
   }
 };
 
-const games = {
-  'game-genre': 1,
-  'game-artist': {
-    description: `Кто исполняет эту песню?`
-  }
-};
-
 const data = [
   {
     artist: `Kevin MacLeod`,
@@ -61,4 +54,4 @@ const data = [
 ];
 
 
-export {initialState, games, data};
+export {initialState, data};

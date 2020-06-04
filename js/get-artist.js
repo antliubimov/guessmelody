@@ -1,9 +1,9 @@
 // get-artist.js
 
-const getArtist = (artist) => `<div class="artist">
-    <input class="artist__input visually-hidden" type="radio" name="answer" value=${artist.artist} id=${artist.answer}>
-    <label class="artist__name" for=${artist.answer}>
-    <img class="artist__picture" src=${artist.src}" alt="${artist.name}">
+const getArtist = (artist, idx) => `<div class="artist">
+    <input class="artist__input visually-hidden" type="radio" name="answer" value="artist-${idx}" id="answer-${idx}">
+    <label class="artist__name" for="answer-${idx}">
+    <img class="artist__picture" src=${artist.image}" alt="${artist.artist}">
     ${artist.name}
     </label>
     </div>`;
