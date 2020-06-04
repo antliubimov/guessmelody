@@ -1,7 +1,7 @@
 // game-get-artist.js
 // <!-- Игра на выбор исполнителя -->
 
-import {getElementFromTemplate, changeScreen, replayGame} from "./utils";
+import {getElementFromTemplate, replayGame} from "./utils";
 import gameArtistTemplate from "./get-game-artist";
 
 import resultSuccess from "./result-success";
@@ -18,7 +18,7 @@ export default () => {
       const result = [resultSuccess, failTries, failTime];
       let randomResult = Math.floor(Math.random() * 2 + 0.5);
 
-      changeScreen(result[randomResult]());
+      //changeScreen(result[randomResult]());
     });
   });
 

@@ -1,8 +1,8 @@
 // game-genre.js
 
-import {getElementFromTemplate, changeScreen, replayGame} from "./utils";
 import gameGenreTemplate from "./get-game-genre";
-import gameArtist from "./game-artist";
+import {getElementFromTemplate, replayGame} from "./utils";
+import {reset} from "./game";
 
 export default () => {
   const gameGenre = getElementFromTemplate(gameGenreTemplate);
@@ -34,10 +34,10 @@ export default () => {
   [...gameChecks].forEach((gameCheck) => gameCheck.addEventListener(`click`, triggerInput));
 
   gameSubmit.addEventListener(`click`, function () {
-    changeScreen(gameArtist());
+    renderNextLevel(state);
   });
 
-  replayGame(gameGenre, `.game__back`);
+  replayGame(gameGenre, `.game__back`, reset);
 
   return gameGenre;
 };

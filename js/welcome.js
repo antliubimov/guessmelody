@@ -1,7 +1,7 @@
 // welcome.js
 
-import {getElementFromTemplate, changeScreen} from "./utils";
-import gameGenre from "./game-genre";
+import {getElementFromTemplate} from "./utils";
+import * as game from "./game";
 
 const template = `<section class="welcome">
   <div class="welcome__logo"><img src="img/melody-logo.png" alt="Угадай мелодию" width="186" height="83"></div>
@@ -21,7 +21,7 @@ export default () => {
   const welcomeButton = welcome.querySelector(`.welcome__button`);
 
   welcomeButton.addEventListener(`click`, function () {
-    changeScreen(gameGenre());
+    game.start();
   });
 
   return welcome;
