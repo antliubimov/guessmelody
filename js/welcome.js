@@ -3,8 +3,7 @@
 import {getElementFromTemplate, changeScreen} from "./utils";
 import gameGenre from "./game-genre";
 
-// <!-- Приветствие -->
-const welcomeTemplate = `<section class="welcome">
+const template = `<section class="welcome">
   <div class="welcome__logo"><img src="img/melody-logo.png" alt="Угадай мелодию" width="186" height="83"></div>
   <button class="welcome__button"><span class="visually-hidden">Начать игру</span></button>
 <h2 class="welcome__rules-title">Правила игры</h2>
@@ -17,12 +16,13 @@ const welcomeTemplate = `<section class="welcome">
 </section>`;
 
 export default () => {
-  const welcome = getElementFromTemplate(welcomeTemplate);
+  const welcome = getElementFromTemplate(template);
 
   const welcomeButton = welcome.querySelector(`.welcome__button`);
 
   welcomeButton.addEventListener(`click`, function () {
     changeScreen(gameGenre());
   });
+
   return welcome;
 };

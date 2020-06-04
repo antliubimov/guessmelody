@@ -4,16 +4,12 @@ import {getElementFromTemplate, changeScreen, replayGame} from "./utils";
 import gameGenreTemplate from "./get-game-genre";
 import gameArtist from "./game-artist";
 
-
-// <!-- Игра на выбор жанра -->
-
 export default () => {
   const gameGenre = getElementFromTemplate(gameGenreTemplate);
-
-  const gameSubmit = gameGenre.querySelector(`.game__submit`);
-  gameSubmit.setAttribute(`disabled`, `true`);
   const gameInputs = gameGenre.querySelectorAll(`.game__input`);
   const gameChecks = gameGenre.querySelectorAll(`.game__check`);
+  const gameSubmit = gameGenre.querySelector(`.game__submit`);
+  gameSubmit.setAttribute(`disabled`, `true`);
 
   const validateChecked = () => {
     let disabled = true;

@@ -1,17 +1,20 @@
 // get-game-genre.js
 
+import {initialState, data} from "./data/data";
 import getHeader from "./get-header";
-import {games, initialState} from "./data/data";
+import getRandomTracks from "./get-random-tracks";
 import getTrack from "./get-track";
 
-const answers = games[`game-genre`].answers.map((answer) => getTrack(answer)).join(``);
+const tracks = getRandomTracks(data, 4);
+const tracksHTML = tracks.map((answer, idx) => getTrack(answer, idx)).join(``);
+const genre = tracks[Math.floor(Math.random() + 0.5)].genre;
 
 const gameGenreTemplate = `<section class="game game--genre">
     ${getHeader(initialState)}
     <section class="game__screen">
-      <h2 class="game__title">${games[`game-genre`].description}</h2>
+      <h2 class="game__title">Выберите ${genre} треки</h2>
       <form class="game__tracks">
-        ${answers}
+        ${tracksHTML}
 
 <!--       track__button&--pause" -->
 

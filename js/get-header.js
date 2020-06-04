@@ -11,9 +11,9 @@ const getHeader = (state) => `<header class="game__header">
       </svg>
 
       <div class="timer__value" xmlns="http://www.w3.org/1999/xhtml">
-        <span class="timer__mins">${state.time.mins}</span>
+        <span class="timer__mins">${(state.time.mins < 10) ? `0` + state.time.mins : state.time.mins }</span>
         <span class="timer__dots">:</span>
-        <span class="timer__secs">${state.time.secs}</span>
+        <span class="timer__secs">${(state.time.secs < 10) ? `0` + state.time.secs : state.time.secs }</span>
       </div>
 
       <div class="game__mistakes">

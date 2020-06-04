@@ -20,7 +20,6 @@ export const replayGame = (element, btnClass) => {
   resultReplay.addEventListener(`click`, backToWelcome);
 };
 
-
 const backToWelcome = () => {
   changeScreen(welcome());
 };
