@@ -2,14 +2,16 @@
 // <!-- Игра на выбор исполнителя -->
 
 import {getElementFromTemplate, replayGame} from "./utils";
-import gameArtistTemplate from "./get-game-artist";
+import gameArtistTemplate from "./game-artist-template";
+import {reset} from "./game";
 
 import resultSuccess from "./result-success";
 import failTime from "./fail-time";
 import failTries from "./fail-tries";
 
-export default () => {
-  const gameArtist = getElementFromTemplate(gameArtistTemplate);
+export default (state, options, answer) => {
+  const template = gameArtistTemplate(state, options, answer);
+  const gameArtist = getElementFromTemplate(template);
 
   const artists = gameArtist.querySelectorAll(`.artist`);
 
@@ -22,7 +24,7 @@ export default () => {
     });
   });
 
-  replayGame(gameArtist, `.game__back`);
+  replayGame(gameArtist, `.game__back`, reset);
 
   return gameArtist;
 };

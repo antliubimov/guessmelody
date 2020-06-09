@@ -1,11 +1,13 @@
 // game-genre.js
 
-import gameGenreTemplate from "./get-game-genre";
+import gameGenreTemplate from "./game-genre-template";
 import {getElementFromTemplate, replayGame} from "./utils";
-import {reset} from "./game";
+import {renderNextLevel, reset} from "./game";
 
-export default () => {
-  const gameGenre = getElementFromTemplate(gameGenreTemplate);
+export default (state, options, answer) => {
+  const template = gameGenreTemplate(state, options, answer);
+  const gameGenre = getElementFromTemplate(template);
+
   const gameInputs = gameGenre.querySelectorAll(`.game__input`);
   const gameChecks = gameGenre.querySelectorAll(`.game__check`);
   const gameSubmit = gameGenre.querySelector(`.game__submit`);
@@ -37,7 +39,7 @@ export default () => {
     renderNextLevel(state);
   });
 
-  replayGame(gameGenre, `.game__back`, reset);
+  //replayGame(gameGenre, `.game__back`, reset);
 
   return gameGenre;
 };

@@ -1,6 +1,6 @@
-// get-header.js
+// header.js
 
-const getHeader = (state) => `<header class="game__header">
+const header = (state) => `<header class="game__header">
       <a class="game__back" href="#">
         <span class="visually-hidden">Сыграть ещё раз</span>
         <img class="game__logo" src="/img/melody-logo-ginger.png" alt="Угадай мелодию">
@@ -11,14 +11,14 @@ const getHeader = (state) => `<header class="game__header">
       </svg>
 
       <div class="timer__value" xmlns="http://www.w3.org/1999/xhtml">
-        <span class="timer__mins">${(state.time.mins < 10) ? `0` + state.time.mins : state.time.mins }</span>
+        <span class="timer__mins">${state.time} </span>
         <span class="timer__dots">:</span>
-        <span class="timer__secs">${(state.time.secs < 10) ? `0` + state.time.secs : state.time.secs }</span>
+        <span class="timer__secs">${state.time }</span>
       </div>
 
       <div class="game__mistakes">
-        ${new Array(3 - state.lives).fill(`<div class="wrong"></div>`).join(``)}
+        ${(3 - state.lives) > 0 ? new Array(3 - state.lives).fill(`<div class="wrong"></div>`).join(``) : ``}
       </div>
     </header>`;
 
-export default getHeader;
+export default header;
