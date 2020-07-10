@@ -13,6 +13,8 @@ export default (state, options, answer) => {
   const gameSubmit = gameGenre.querySelector(`.game__submit`);
   gameSubmit.setAttribute(`disabled`, `true`);
 
+  const currentAnswers = [];
+
   const validateChecked = () => {
     let disabled = true;
     for (let input of gameInputs) {
@@ -29,7 +31,14 @@ export default (state, options, answer) => {
   };
 
   const triggerInput = (e) => {
-    const inp = document.querySelector(`#${e.target.attributes.for[`value`]}`);
+    const target = e.target.attributes.for[`value`];
+    const inp = document.querySelector(`#${target}`);
+
+    if (!inp.checked) {
+      currentAnswers.push(target);
+    } else {
+      currentAnswers.splice(currentAnswers.indexOf(target), 1);
+    }
     inp.addEventListener(`change`, validateChecked);
   };
 
@@ -39,7 +48,7 @@ export default (state, options, answer) => {
     renderNextLevel(state);
   });
 
-  //replayGame(gameGenre, `.game__back`, reset);
+  replayGame(gameGenre, `.game__back`, reset);
 
   return gameGenre;
 };

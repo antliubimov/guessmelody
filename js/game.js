@@ -53,5 +53,6 @@ export const reset = () => {
 };
 
 export const start = () => {
-  renderLevel(Object.assign({}, initialState));
+  let currState = Object.assign({}, initialState);
+  renderLevel(currState);
 };
