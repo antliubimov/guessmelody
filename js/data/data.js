@@ -30,6 +30,7 @@ export default [
       }
     ],
     answer: {
+      id: 2,
       artist: `Audionautix`,
       name: `Travel Light`,
       src: `https://www.youtube.com/audiolibrary_download?vid=a127d9b7de8a17cf`,
@@ -62,6 +63,7 @@ export default [
       },
     ],
     answer: {
+      id: 2,
       artist: `Quincas Moreira`,
       name: `Firefly`,
       image: `http://www.atribuna.com.br/fileadmin/_processed_/csm_Quincas-Moreira-Foto-Divulgacao_76d1a8b00e.jpg`,
@@ -98,75 +100,7 @@ export default [
       }
     ],
     answer: {
-      artist: `Audionautix`,
-      name: `Travel Light`,
-      src: `https://www.youtube.com/audiolibrary_download?vid=a127d9b7de8a17cf`,
-      genre: `Country`
-    }
-  },
-  {
-    type: `task-2`,
-    options: [
-      {
-        artist: `Kevin MacLeod`,
-        name: `Long Stroll`,
-        image: `https://yt3.ggpht.com/-fkDeGauT7Co/AAAAAAAAAAI/AAAAAAAAAAA/dkF5ZKkrxRo/s900-c-k-no-mo-rj-c0xffffff/photo.jpg`,
-        src: `https://www.youtube.com/audiolibrary_download?vid=91624fdc22fc54ed`,
-        genre: `Jazz`
-      },
-      {
-        artist: `Quincas Moreira`,
-        name: `Firefly`,
-        image: `http://www.atribuna.com.br/fileadmin/_processed_/csm_Quincas-Moreira-Foto-Divulgacao_76d1a8b00e.jpg`,
-        src: `https://www.youtube.com/audiolibrary_download?vid=79100e44c826e2f7`,
-        genre: `Electronic`
-      },
-      {
-        artist: `Riot`,
-        name: `	Level Plane`,
-        image: `https://i.ytimg.com/vi/jzgM3m8Vp1k/maxresdefault.jpg`,
-        src: `https://www.youtube.com/audiolibrary_download?vid=dfb828f40096184c`,
-        genre: `R&B`
-      },
-
-    ],
-    answer: {
-      artist: `Quincas Moreira`,
-      name: `Firefly`,
-      image: `http://www.atribuna.com.br/fileadmin/_processed_/csm_Quincas-Moreira-Foto-Divulgacao_76d1a8b00e.jpg`,
-      src: `https://www.youtube.com/audiolibrary_download?vid=79100e44c826e2f7`,
-      genre: `Electronic`
-    }
-  },
-  {
-    type: `task-1`,
-    options: [
-      {
-        artist: `Jingle Punks`,
-        name: `In the Land of Rhinoplasty`,
-        src: `https://www.youtube.com/audiolibrary_download?vid=dc3b4dc549becd6b`,
-        genre: `Rock`
-      },
-      {
-        artist: `Audionautix`,
-        name: `Travel Light`,
-        src: `https://www.youtube.com/audiolibrary_download?vid=a127d9b7de8a17cf`,
-        genre: `Country`
-      },
-      {
-        artist: `Riot`,
-        name: `	Level Plane`,
-        src: `https://www.youtube.com/audiolibrary_download?vid=dfb828f40096184c`,
-        genre: `R&B`
-      },
-      {
-        artist: `Jingle Punks`,
-        name: `Lucky Day`,
-        src: `https://www.youtube.com/audiolibrary_download?vid=bcbe5be936a32fb1`,
-        genre: `Pop`
-      }
-    ],
-    answer: {
+      id: 2,
       artist: `Audionautix`,
       name: `Travel Light`,
       src: `https://www.youtube.com/audiolibrary_download?vid=a127d9b7de8a17cf`,
@@ -200,6 +134,7 @@ export default [
 
     ],
     answer: {
+      id:2,
       artist: `Quincas Moreira`,
       name: `Firefly`,
       image: `http://www.atribuna.com.br/fileadmin/_processed_/csm_Quincas-Moreira-Foto-Divulgacao_76d1a8b00e.jpg`,
@@ -236,6 +171,78 @@ export default [
       }
     ],
     answer: {
+      id:2,
+      artist: `Audionautix`,
+      name: `Travel Light`,
+      src: `https://www.youtube.com/audiolibrary_download?vid=a127d9b7de8a17cf`,
+      genre: `Country`
+    }
+  },
+  {
+    type: `task-2`,
+    options: [
+      {
+        artist: `Kevin MacLeod`,
+        name: `Long Stroll`,
+        image: `https://yt3.ggpht.com/-fkDeGauT7Co/AAAAAAAAAAI/AAAAAAAAAAA/dkF5ZKkrxRo/s900-c-k-no-mo-rj-c0xffffff/photo.jpg`,
+        src: `https://www.youtube.com/audiolibrary_download?vid=91624fdc22fc54ed`,
+        genre: `Jazz`
+      },
+      {
+        artist: `Quincas Moreira`,
+        name: `Firefly`,
+        image: `http://www.atribuna.com.br/fileadmin/_processed_/csm_Quincas-Moreira-Foto-Divulgacao_76d1a8b00e.jpg`,
+        src: `https://www.youtube.com/audiolibrary_download?vid=79100e44c826e2f7`,
+        genre: `Electronic`
+      },
+      {
+        artist: `Riot`,
+        name: `	Level Plane`,
+        image: `https://i.ytimg.com/vi/jzgM3m8Vp1k/maxresdefault.jpg`,
+        src: `https://www.youtube.com/audiolibrary_download?vid=dfb828f40096184c`,
+        genre: `R&B`
+      },
+
+    ],
+    answer: {
+      id:2,
+      artist: `Quincas Moreira`,
+      name: `Firefly`,
+      image: `http://www.atribuna.com.br/fileadmin/_processed_/csm_Quincas-Moreira-Foto-Divulgacao_76d1a8b00e.jpg`,
+      src: `https://www.youtube.com/audiolibrary_download?vid=79100e44c826e2f7`,
+      genre: `Electronic`
+    }
+  },
+  {
+    type: `task-1`,
+    options: [
+      {
+        artist: `Jingle Punks`,
+        name: `In the Land of Rhinoplasty`,
+        src: `https://www.youtube.com/audiolibrary_download?vid=dc3b4dc549becd6b`,
+        genre: `Rock`
+      },
+      {
+        artist: `Audionautix`,
+        name: `Travel Light`,
+        src: `https://www.youtube.com/audiolibrary_download?vid=a127d9b7de8a17cf`,
+        genre: `Country`
+      },
+      {
+        artist: `Riot`,
+        name: `	Level Plane`,
+        src: `https://www.youtube.com/audiolibrary_download?vid=dfb828f40096184c`,
+        genre: `R&B`
+      },
+      {
+        artist: `Jingle Punks`,
+        name: `Lucky Day`,
+        src: `https://www.youtube.com/audiolibrary_download?vid=bcbe5be936a32fb1`,
+        genre: `Pop`
+      }
+    ],
+    answer: {
+      id: 4,
       artist: `Jingle Punks`,
       name: `In the Land of Rhinoplasty`,
       src: `https://www.youtube.com/audiolibrary_download?vid=dc3b4dc549becd6b`,
@@ -269,6 +276,7 @@ export default [
 
     ],
     answer: {
+      id: 1,
       artist: `Kevin MacLeod`,
       name: `Long Stroll`,
       image: `https://yt3.ggpht.com/-fkDeGauT7Co/AAAAAAAAAAI/AAAAAAAAAAA/dkF5ZKkrxRo/s900-c-k-no-mo-rj-c0xffffff/photo.jpg`,
@@ -305,6 +313,7 @@ export default [
       }
     ],
     answer: {
+      id: 4,
       artist: `Jingle Punks`,
       name: `Lucky Day`,
       src: `https://www.youtube.com/audiolibrary_download?vid=bcbe5be936a32fb1`,
@@ -338,6 +347,7 @@ export default [
 
     ],
     answer: {
+      id: 3,
       artist: `Riot`,
       name: `	Level Plane`,
       image: `https://i.ytimg.com/vi/jzgM3m8Vp1k/maxresdefault.jpg`,

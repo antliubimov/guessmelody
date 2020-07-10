@@ -8,7 +8,7 @@ const trackTemplate = (track, idx) => `<div class="track">
             <audio src=${track.src}></audio>
           </div>
           <div class="game__answer">
-            <input class="game__input visually-hidden" type="checkbox" name="answer" value="answer-${idx + 1}" id="answer-${idx + 1}">
+            <input class="game__input visually-hidden" type="checkbox" name="answer" value="${idx + 1}" id="answer-${idx + 1}">
             <label class="game__check" for="answer-${idx + 1}">Отметить</label>
           </div>
         </div>`;
